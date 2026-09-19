@@ -51,11 +51,7 @@
   // timer, so Cursor's 1s afterDelay autosave becomes on_focus_change.
   "tab_size": 2,
   "hard_tabs": false,
-  "autosave": {
-    "after_delay": {
-      "milliseconds": 1000
-    }
-  },
+  "autosave": "on_focus_change",
   "format_on_save": "on",
   "ensure_final_newline_on_save": true,
   "remove_trailing_whitespace_on_save": true,
@@ -147,7 +143,7 @@
       ],
       "preferred_line_length": 120,
       "soft_wrap": "bounded",
-      "tab_size": 2,
+      "tab_size": 4,
       "code_actions_on_format": { "source.fixAll.ruff": true, "source.organizeImports.ruff": true }
     },
     // Java Spring profiles
@@ -161,7 +157,7 @@
               ],
               "preferred_line_length": 120,
               "soft_wrap": "bounded",
-              "tab_size": 2 }
+              "tab_size": 4 }
   },
 
   "terminal": {
