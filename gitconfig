@@ -11,7 +11,7 @@
 
 [core]
   pager = less -FRSX
-  editor = code --wait
+  editor = zed --wait
 	quotepath = off
 
 [alias]
@@ -69,6 +69,6 @@
 	process = git-lfs filter-process
 	required = true
 [diff]
-	tool = cursor
-[difftool "cursor"]
-	cmd = "code --wait --diff  "
+	tool = zed
+[difftool "zed"]
+	cmd = zed --wait --diff \"$LOCAL\" \"$REMOTE\"

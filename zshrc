@@ -37,8 +37,8 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8   
 
 # Editor settings
-export EDITOR=code
-export BUNDLER_EDITOR=code
+export EDITOR="zed --wait"
+export BUNDLER_EDITOR=zed
 
 # Python debugger setting
 export PYTHONBREAKPOINT=ipdb.set_trace

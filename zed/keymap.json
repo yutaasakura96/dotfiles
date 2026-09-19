@@ -1,0 +1,10 @@
+// Cursor shortcuts come from "base_keymap": "Cursor" in settings.json.
+// Only custom bindings from your Cursor profiles live here.
+[
+  {
+    "bindings": {
+      // NextJS Dev profile: toggle sidebar
+      "alt-cmd-s": "workspace::ToggleLeftDock"
+    }
+  }
+]

@@ -1,0 +1,192 @@
+// Migrated from Cursor on 2026-09-19. Originals: ~/Documents/cursor-backup-2026-09-19
+// Cursor profiles map to the per-language overrides under "languages" below.
+{
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "preview_tabs": {
+    "enabled": true
+  },
+  "git_panel": {
+    "button": true
+  },
+  "gutter": {
+    "folds": true
+  },
+  "file_types": {
+    "erb": [
+      "*.erb"
+    ],
+    "vue": [
+      "*.vue"
+    ]
+  },
+  "auto_indent_on_paste": true,
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry"
+    },
+    "claude-acp": {
+      "type": "registry"
+    }
+  },
+  "base_keymap": "VSCode",
+  "telemetry": { "diagnostics": false, "metrics": false },
+  "restore_on_startup": "none",
+
+  // Appearance
+  "theme": { "mode": "dark", "light": "One Light", "dark": "Shades Of Purple (Super Dark)" },
+  "icon_theme": "VSCode Great Icons Theme",
+  "buffer_font_size": 20.0,
+  "ui_font_size": 16,
+  "cursor_blink": true,
+  "cursor_shape": "bar",
+  "colorize_brackets": true,
+  "minimap": { "show": "never" },
+  "wrap_guides": [80, 120],
+  "soft_wrap": "bounded",
+  "preferred_line_length": 120,
+
+  // Editing and saving. Zed skips format-on-save when autosave runs on a
+  // timer, so Cursor's 1s afterDelay autosave becomes on_focus_change.
+  "tab_size": 2,
+  "hard_tabs": false,
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "format_on_save": "on",
+  "ensure_final_newline_on_save": true,
+  "remove_trailing_whitespace_on_save": true,
+
+  // Cursor's files.exclude, on top of Zed's defaults
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/.jj",
+    "**/.sl",
+    "**/.repo",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    "**/node_modules",
+    "**/__pycache__",
+    "**/.pytest_cache",
+    "**/.vscode"
+  ],
+
+  // Used only when a project has no Prettier config of its own
+  "prettier": {
+    "singleQuote": true,
+    "semi": true,
+    "trailingComma": "all",
+    "printWidth": 100,
+    "tabWidth": 2,
+    "bracketSpacing": true,
+    "arrowParens": "always"
+  },
+
+  "languages": {
+    // NextJS / React / TypeScript / Vanilla JS profiles
+    "JavaScript": {
+      "colorize_brackets": true,
+      "auto_indent_on_paste": true,
+      "ensure_final_newline_on_save": true,
+      "format_on_save": "on",
+      "wrap_guides": [
+        80,
+        120
+      ],
+      "preferred_line_length": 120,
+      "soft_wrap": "bounded",
+      "tab_size": 2,
+      "code_actions_on_format": { "source.fixAll.eslint": true, "source.organizeImports": true }
+    },
+    "TypeScript": {
+      "colorize_brackets": true,
+      "auto_indent_on_paste": true,
+      "ensure_final_newline_on_save": true,
+      "format_on_save": "on",
+      "wrap_guides": [
+        80,
+        120
+      ],
+      "preferred_line_length": 120,
+      "soft_wrap": "bounded",
+      "tab_size": 2,
+      "code_actions_on_format": { "source.fixAll.eslint": true, "source.organizeImports": true }
+    },
+    "TSX": {
+      "colorize_brackets": true,
+      "auto_indent_on_paste": true,
+      "ensure_final_newline_on_save": true,
+      "format_on_save": "on",
+      "wrap_guides": [
+        80,
+        120
+      ],
+      "preferred_line_length": 120,
+      "soft_wrap": "bounded",
+      "tab_size": 2,
+      "code_actions_on_format": { "source.fixAll.eslint": true, "source.organizeImports": true }
+    },
+    // Python-Django profile: 4 spaces, Ruff lint fixes + import sorting on save
+    // (Zed formats Python with Ruff, which matches Black's style)
+    "Python": {
+      "colorize_brackets": true,
+      "auto_indent_on_paste": true,
+      "ensure_final_newline_on_save": true,
+      "format_on_save": "on",
+      "wrap_guides": [
+        80,
+        120
+      ],
+      "preferred_line_length": 120,
+      "soft_wrap": "bounded",
+      "tab_size": 2,
+      "code_actions_on_format": { "source.fixAll.ruff": true, "source.organizeImports.ruff": true }
+    },
+    // Java Spring profiles
+    "Java": { "colorize_brackets": true,
+              "auto_indent_on_paste": true,
+              "ensure_final_newline_on_save": true,
+              "format_on_save": "on",
+              "wrap_guides": [
+                  80,
+                  120
+              ],
+              "preferred_line_length": 120,
+              "soft_wrap": "bounded",
+              "tab_size": 2 }
+  },
+
+  "terminal": {
+    "dock": "right",
+    "font_size": 14,
+    "cursor_shape": "bar",
+    "blinking": "on",
+    "max_scroll_history_lines": 10000
+  },
+
+  "auto_install_extensions": {
+    "shades-of-purple-theme": true,
+    "vscode-great-icons": true,
+    "material-icon-theme": true,
+    "html": true,
+    "emmet": true,
+    "vue": true,
+    "prisma": true,
+    "dockerfile": true,
+    "docker-compose": true,
+    "java": true,
+    "django": true,
+    "ruby": true,
+    "dart": true,
+    "neocmake": true,
+    "rainbow-csv": true
+  }
+}
