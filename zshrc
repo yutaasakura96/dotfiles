@@ -43,6 +43,7 @@ export PYTHONBREAKPOINT=ipdb.set_trace
 
 # npm global binaries
 export PATH="$HOME/.npm-global/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 
 # Java Version from asdf
 if command -v asdf >/dev/null; then
