@@ -92,3 +92,6 @@
 	path = ~/.gitconfig-agents
 [includeIf "gitdir:~/Documents/GitHub/firstmate-projects/*/.git/worktrees/"]
 	path = ~/.gitconfig-agents
+# no-mistakes pipeline worktrees live under ~/.no-mistakes/ (repos/*.git/worktrees/*, worktrees/*).
+[includeIf "gitdir:~/.no-mistakes/"]
+	path = ~/.gitconfig-agents
