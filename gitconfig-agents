@@ -1,0 +1,9 @@
+# Loaded only inside agent worktrees (see the includeIf blocks at the end of gitconfig).
+# Agents sign and push with a file-based key, so they never raise a 1Password prompt.
+[user]
+	signingkey = ~/.ssh/agents_ed25519
+[gpg "ssh"]
+	program = ssh-keygen
+	allowedSignersFile = ~/.ssh/allowed_signers
+[core]
+	sshCommand = ssh -i ~/.ssh/agents_ed25519 -o IdentitiesOnly=yes -o IdentityAgent=none

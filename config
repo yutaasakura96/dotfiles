@@ -1,15 +1,13 @@
-# Global settings for SSH
-Host *
-  UseKeychain yes
-  AddKeysToAgent yes
-# Personal GitHub account
-Host github-personal
+# Keys live in 1Password; the agent unlocks them with Touch ID.
+# IdentityFile points at the public key so ssh asks the agent for that exact key.
+
+# Personal GitHub account (yutaasakura96)
+Host github.com github-personal
   HostName github.com
   User git
-  IdentityFile ~/.ssh/id_ed25519
-# Work GitHub account
-Host github-work
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/id_ed25519_work
-    IdentitiesOnly yes
+  IdentityFile ~/.ssh/github_1p.pub
+  IdentitiesOnly yes
+
+# Global settings for SSH
+Host *
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

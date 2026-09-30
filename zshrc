@@ -24,10 +24,8 @@ unalias rm lt 2>/dev/null
 export HOMEBREW_NO_ANALYTICS=1
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
-# Initialize asdf (Version Manager)
-if [[ -f "/opt/homebrew/opt/asdf/libexec/asdf.sh" ]]; then
-  . /opt/homebrew/opt/asdf/libexec/asdf.sh
-fi
+# Initialize asdf (Version Manager). asdf 0.16+ has no asdf.sh; put its shims on PATH.
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # Load custom aliases if available
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
@@ -45,6 +43,7 @@ export PYTHONBREAKPOINT=ipdb.set_trace
 
 # npm global binaries
 export PATH="$HOME/.npm-global/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 
 # Java Version from asdf
 if command -v asdf >/dev/null; then
@@ -60,3 +59,4 @@ export AWS_PROFILE=yuta-tokyo
 
 # Drop duplicate PATH entries
 typeset -U path
+

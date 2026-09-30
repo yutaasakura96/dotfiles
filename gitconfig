@@ -13,6 +13,7 @@
   pager = less -FRSX
   editor = zed --wait
 	quotepath = off
+	hooksPath = /Users/yutaasakura/Documents/GitHub/agentic-setup/git-hooks
 
 [alias]
   co = checkout
@@ -63,6 +64,15 @@
 [user]
 	email = yuta.asakura.se@gmail.com
 	name = yuta asakura
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEQ1Hcc3tOswzhHITXQ8IMcQeBLDHOsST7eL22DVnIQm
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -72,3 +82,13 @@
 	tool = zed
 [difftool "zed"]
 	cmd = zed --wait --diff \"$LOCAL\" \"$REMOTE\"
+
+# Agent worktrees use gitconfig-agents instead of the 1Password key.
+# gitdir matches the real .git directory: a treehouse worktree's lives under its main clone's
+# .git/worktrees/, not under ~/.treehouse/, so each main clone location needs its own block.
+[includeIf "gitdir:~/.treehouse/"]
+	path = ~/.gitconfig-agents
+[includeIf "gitdir:~/Documents/GitHub/firstmate/projects/*/.git/worktrees/"]
+	path = ~/.gitconfig-agents
+[includeIf "gitdir:~/Documents/GitHub/firstmate-projects/*/.git/worktrees/"]
+	path = ~/.gitconfig-agents
