@@ -13,6 +13,7 @@
   pager = less -FRSX
   editor = zed --wait
 	quotepath = off
+	hooksPath = /Users/yutaasakura/Documents/GitHub/agentic-setup/git-hooks
 
 [alias]
   co = checkout
