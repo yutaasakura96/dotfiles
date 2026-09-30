@@ -82,3 +82,13 @@
 	tool = zed
 [difftool "zed"]
 	cmd = zed --wait --diff \"$LOCAL\" \"$REMOTE\"
+
+# Agent worktrees use gitconfig-agents instead of the 1Password key.
+# gitdir matches the real .git directory: a treehouse worktree's lives under its main clone's
+# .git/worktrees/, not under ~/.treehouse/, so each main clone location needs its own block.
+[includeIf "gitdir:~/.treehouse/"]
+	path = ~/.gitconfig-agents
+[includeIf "gitdir:~/Documents/GitHub/firstmate/projects/*/.git/worktrees/"]
+	path = ~/.gitconfig-agents
+[includeIf "gitdir:~/Documents/GitHub/firstmate-projects/*/.git/worktrees/"]
+	path = ~/.gitconfig-agents
